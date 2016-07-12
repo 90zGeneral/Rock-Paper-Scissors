@@ -9,7 +9,22 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    var cpuSelectionArray = ["Rock", "Paper", "Scissors"]
+    
+    @IBOutlet var myScore: UILabel!
+    @IBOutlet var cpuScore: UILabel!
+    @IBOutlet var results: UILabel!
+    
+    @IBOutlet var cpuSelection: UIButton!
+    @IBOutlet var mySelection: UIButton!
+    
+    @IBAction func mySelctionChosen(sender: AnyObject) {
+    }
+    
+    @IBAction func playGame(sender: AnyObject) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

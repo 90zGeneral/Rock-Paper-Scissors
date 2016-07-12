@@ -12,7 +12,9 @@
 		D5028CD01D33D71200CD03B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5028CCE1D33D71200CD03B3 /* Main.storyboard */; };
 		D5028CD21D33D71200CD03B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5028CD11D33D71200CD03B3 /* Assets.xcassets */; };
 		D5028CD51D33D71200CD03B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5028CD31D33D71200CD03B3 /* LaunchScreen.storyboard */; };
-		D5028CDF1D33EAC900CD03B3 /* polkaDots.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D5028CDE1D33EAC900CD03B3 /* polkaDots.jpeg */; };
+		D5028CE31D35A49600CD03B3 /* paper.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D5028CE01D35A49600CD03B3 /* paper.jpeg */; };
+		D5028CE41D35A49600CD03B3 /* rock.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D5028CE11D35A49600CD03B3 /* rock.jpeg */; };
+		D5028CE51D35A49600CD03B3 /* scissors.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D5028CE21D35A49600CD03B3 /* scissors.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +25,9 @@
 		D5028CD11D33D71200CD03B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D5028CD41D33D71200CD03B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D5028CD61D33D71200CD03B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D5028CDE1D33EAC900CD03B3 /* polkaDots.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = polkaDots.jpeg; sourceTree = "<group>"; };
+		D5028CE01D35A49600CD03B3 /* paper.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paper.jpeg; sourceTree = "<group>"; };
+		D5028CE11D35A49600CD03B3 /* rock.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rock.jpeg; sourceTree = "<group>"; };
+		D5028CE21D35A49600CD03B3 /* scissors.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = scissors.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,12 +63,22 @@
 				D5028CCA1D33D71100CD03B3 /* AppDelegate.swift */,
 				D5028CCC1D33D71100CD03B3 /* ViewController.swift */,
 				D5028CCE1D33D71200CD03B3 /* Main.storyboard */,
-				D5028CDE1D33EAC900CD03B3 /* polkaDots.jpeg */,
+				D5028CE61D35A4A300CD03B3 /* Images */,
 				D5028CD11D33D71200CD03B3 /* Assets.xcassets */,
 				D5028CD31D33D71200CD03B3 /* LaunchScreen.storyboard */,
 				D5028CD61D33D71200CD03B3 /* Info.plist */,
 			);
 			path = "Rock Paper Scissors";
+			sourceTree = "<group>";
+		};
+		D5028CE61D35A4A300CD03B3 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				D5028CE01D35A49600CD03B3 /* paper.jpeg */,
+				D5028CE11D35A49600CD03B3 /* rock.jpeg */,
+				D5028CE21D35A49600CD03B3 /* scissors.jpeg */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,9 +140,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5028CD51D33D71200CD03B3 /* LaunchScreen.storyboard in Resources */,
+				D5028CE41D35A49600CD03B3 /* rock.jpeg in Resources */,
+				D5028CE51D35A49600CD03B3 /* scissors.jpeg in Resources */,
 				D5028CD21D33D71200CD03B3 /* Assets.xcassets in Resources */,
+				D5028CE31D35A49600CD03B3 /* paper.jpeg in Resources */,
 				D5028CD01D33D71200CD03B3 /* Main.storyboard in Resources */,
-				D5028CDF1D33EAC900CD03B3 /* polkaDots.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
