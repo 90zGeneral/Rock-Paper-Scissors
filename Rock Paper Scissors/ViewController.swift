@@ -10,7 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var cpuSelectionArray = ["Rock", "Paper", "Scissors"]
+    var timer = NSTimer()
+    
+    var cpuSelectionArray = ["Rock.jpeg", "Paper.jpeg", "Scissors.jpeg"]
     
     @IBOutlet var myScore: UILabel!
     @IBOutlet var cpuScore: UILabel!
@@ -23,11 +25,22 @@ class ViewController: UIViewController {
     }
     
     @IBAction func playGame(sender: AnyObject) {
+        
+        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+        
+    }
+    
+    func update() {
+        
+        
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        results.text = "WINNER!"
     }
 
     override func didReceiveMemoryWarning() {
