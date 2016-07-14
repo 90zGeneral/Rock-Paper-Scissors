@@ -12,27 +12,71 @@ class ViewController: UIViewController {
     
     var timer = NSTimer()
     
-    var cpuSelectionArray = ["Rock.jpeg", "Paper.jpeg", "Scissors.jpeg"]
+    var cpuSelectionArray = ["rock.jpeg", "paper.jpeg", "scissors.jpeg"]
+    
+    var didGameStart = false
     
     @IBOutlet var myScore: UILabel!
     @IBOutlet var cpuScore: UILabel!
     @IBOutlet var results: UILabel!
     
-    @IBOutlet var cpuSelection: UIButton!
-    @IBOutlet var mySelection: UIButton!
-    
-    @IBAction func mySelctionChosen(sender: AnyObject) {
+    @IBOutlet var mySelection: UIImageView!
+    @IBOutlet var cpuSelection: UIImageView!
+
+    @IBAction func resetGame(sender: AnyObject) {
+        
+        mySelection.image = UIImage(named: "questionMark.jpg")
+        cpuSelection.image = UIImage(named: "questionMark.jpg")
+        
+        didGameStart = false
+        
     }
     
-    @IBAction func playGame(sender: AnyObject) {
+    @IBAction func rock(sender: AnyObject) {
         
-        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+        if !didGameStart {
+            
+            mySelection.image = UIImage(named: "rock.jpeg")
+            
+            let randomImage = Int(arc4random_uniform(UInt32(cpuSelectionArray.count)))
+            
+            cpuSelection.image = UIImage(named: cpuSelectionArray[randomImage])
+            
+            didGameStart = true
+            
+        }
+        
+    }
+
+    @IBAction func paper(sender: AnyObject) {
+        
+        if !didGameStart {
+            
+            mySelection.image = UIImage(named: "paper.jpeg")
+            
+            let randomImage = Int(arc4random_uniform(UInt32(cpuSelectionArray.count)))
+            
+            cpuSelection.image = UIImage(named: cpuSelectionArray[randomImage])
+            
+            didGameStart = true
+            
+        }
         
     }
     
-    func update() {
+    @IBAction func scissors(sender: AnyObject) {
         
+        if !didGameStart {
         
+            mySelection.image = UIImage(named: "scissors.jpeg")
+        
+            let randomImage = Int(arc4random_uniform(UInt32(cpuSelectionArray.count)))
+        
+            cpuSelection.image = UIImage(named: cpuSelectionArray[randomImage])
+            
+            didGameStart = true
+            
+        }
         
     }
     
@@ -40,7 +84,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        results.text = "WINNER!"
+        results.text = ""
     }
 
     override func didReceiveMemoryWarning() {

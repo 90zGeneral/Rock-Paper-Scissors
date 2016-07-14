@@ -15,6 +15,7 @@
 		D5028CE31D35A49600CD03B3 /* paper.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D5028CE01D35A49600CD03B3 /* paper.jpeg */; };
 		D5028CE41D35A49600CD03B3 /* rock.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D5028CE11D35A49600CD03B3 /* rock.jpeg */; };
 		D5028CE51D35A49600CD03B3 /* scissors.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D5028CE21D35A49600CD03B3 /* scissors.jpeg */; };
+		D5028CE81D3829C400CD03B3 /* questionMark.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D5028CE71D3829C400CD03B3 /* questionMark.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		D5028CE01D35A49600CD03B3 /* paper.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paper.jpeg; sourceTree = "<group>"; };
 		D5028CE11D35A49600CD03B3 /* rock.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rock.jpeg; sourceTree = "<group>"; };
 		D5028CE21D35A49600CD03B3 /* scissors.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = scissors.jpeg; sourceTree = "<group>"; };
+		D5028CE71D3829C400CD03B3 /* questionMark.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = questionMark.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				D5028CE01D35A49600CD03B3 /* paper.jpeg */,
 				D5028CE11D35A49600CD03B3 /* rock.jpeg */,
 				D5028CE21D35A49600CD03B3 /* scissors.jpeg */,
+				D5028CE71D3829C400CD03B3 /* questionMark.jpg */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 				D5028CD21D33D71200CD03B3 /* Assets.xcassets in Resources */,
 				D5028CE31D35A49600CD03B3 /* paper.jpeg in Resources */,
 				D5028CD01D33D71200CD03B3 /* Main.storyboard in Resources */,
+				D5028CE81D3829C400CD03B3 /* questionMark.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
