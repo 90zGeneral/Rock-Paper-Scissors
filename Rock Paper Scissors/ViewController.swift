@@ -28,6 +28,8 @@ class ViewController: UIViewController {
         mySelection.image = UIImage(named: "questionMark.jpg")
         cpuSelection.image = UIImage(named: "questionMark.jpg")
         
+        results.text = ""
+        
         didGameStart = false
         
     }
@@ -43,6 +45,20 @@ class ViewController: UIViewController {
             cpuSelection.image = UIImage(named: cpuSelectionArray[randomImage])
             
             didGameStart = true
+            
+            if cpuSelection.image == UIImage(named: "rock.jpeg") {
+                
+                results.text = "TIE"
+                
+            }else if cpuSelection.image == UIImage(named: "paper.jpeg") {
+                
+                results.text = "LOSER"
+                
+            }else {
+                
+                results.text = "WINNER"
+                
+            }
             
         }
         
@@ -60,6 +76,20 @@ class ViewController: UIViewController {
             
             didGameStart = true
             
+            if cpuSelection.image == UIImage(named: "paper.jpeg") {
+                
+                results.text = "TIE"
+                
+            }else if cpuSelection.image == UIImage(named: "scissors.jpeg") {
+                
+                results.text = "LOSER"
+                
+            }else {
+                
+                results.text = "WINNER"
+                
+            }
+            
         }
         
     }
@@ -75,6 +105,20 @@ class ViewController: UIViewController {
             cpuSelection.image = UIImage(named: cpuSelectionArray[randomImage])
             
             didGameStart = true
+            
+            if cpuSelection.image == UIImage(named: "scissors.jpeg") {
+                
+                results.text = "TIE"
+                
+            }else if cpuSelection.image == UIImage(named: "rock.jpeg") {
+                
+                results.text = "LOSER"
+                
+            }else {
+                
+                results.text = "WINNER"
+                
+            }
             
         }
         
