@@ -11,10 +11,10 @@ import UIKit
 class ViewController: UIViewController {
     
     var timer = NSTimer()
-    
     var cpuSelectionArray = ["rock.jpeg", "paper.jpeg", "scissors.jpeg"]
-    
     var didGameStart = false
+    var myCurrentScore = 0
+    var cpuCurrentScore = 0
     
     @IBOutlet var myScore: UILabel!
     @IBOutlet var cpuScore: UILabel!
@@ -53,10 +53,14 @@ class ViewController: UIViewController {
             }else if cpuSelection.image == UIImage(named: "paper.jpeg") {
                 
                 results.text = "LOSER"
+                cpuCurrentScore += 1
+                cpuScore.text = String(cpuCurrentScore)
                 
             }else {
                 
                 results.text = "WINNER"
+                myCurrentScore += 1
+                myScore.text = String(myCurrentScore)
                 
             }
             
@@ -83,10 +87,14 @@ class ViewController: UIViewController {
             }else if cpuSelection.image == UIImage(named: "scissors.jpeg") {
                 
                 results.text = "LOSER"
+                cpuCurrentScore += 1
+                cpuScore.text = String(cpuCurrentScore)
                 
             }else {
                 
                 results.text = "WINNER"
+                myCurrentScore += 1
+                myScore.text = String(myCurrentScore)
                 
             }
             
@@ -113,10 +121,15 @@ class ViewController: UIViewController {
             }else if cpuSelection.image == UIImage(named: "rock.jpeg") {
                 
                 results.text = "LOSER"
+                cpuCurrentScore += 1
+                cpuScore.text = String(cpuCurrentScore)
+                
                 
             }else {
                 
                 results.text = "WINNER"
+                myCurrentScore += 1
+                myScore.text = String(myCurrentScore)
                 
             }
             
