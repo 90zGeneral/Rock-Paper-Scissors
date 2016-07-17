@@ -15,10 +15,12 @@ class ViewController: UIViewController {
     var didGameStart = false
     var myCurrentScore = 0
     var cpuCurrentScore = 0
+    var rounds = 1
     
     @IBOutlet var myScore: UILabel!
     @IBOutlet var cpuScore: UILabel!
     @IBOutlet var results: UILabel!
+    @IBOutlet var roundLabel: UILabel!
     
     @IBOutlet var mySelection: UIImageView!
     @IBOutlet var cpuSelection: UIImageView!
@@ -28,6 +30,8 @@ class ViewController: UIViewController {
         mySelection.image = UIImage(named: "questionMark.jpg")
         cpuSelection.image = UIImage(named: "questionMark.jpg")
         
+        rounds += 1
+        roundLabel.text = "Round: \(rounds)"
         results.text = ""
         
         didGameStart = false
