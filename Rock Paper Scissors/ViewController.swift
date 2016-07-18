@@ -28,7 +28,10 @@ class ViewController: UIViewController {
     @IBAction func resetGame(sender: AnyObject) {
         
         mySelection.image = UIImage(named: "questionMark.jpg")
-        cpuSelection.image = UIImage(named: "questionMark.jpg")
+//        cpuSelection.image = UIImage(named: "questionMark.jpg")
+        
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.3, target: self, selector: #selector(animate), userInfo: nil, repeats: true)
+        
         
         rounds += 1
         roundLabel.text = "Round: \(rounds)"
@@ -41,6 +44,8 @@ class ViewController: UIViewController {
     @IBAction func rock(sender: AnyObject) {
         
         if !didGameStart {
+            
+            timer.invalidate()
             
             mySelection.image = UIImage(named: "rock.jpeg")
             
@@ -76,6 +81,8 @@ class ViewController: UIViewController {
         
         if !didGameStart {
             
+            timer.invalidate()
+            
             mySelection.image = UIImage(named: "paper.jpeg")
             
             let randomImage = Int(arc4random_uniform(UInt32(cpuSelectionArray.count)))
@@ -109,6 +116,8 @@ class ViewController: UIViewController {
     @IBAction func scissors(sender: AnyObject) {
         
         if !didGameStart {
+            
+            timer.invalidate()
         
             mySelection.image = UIImage(named: "scissors.jpeg")
         
@@ -137,6 +146,18 @@ class ViewController: UIViewController {
                 
             }
             
+        }
+        
+    }
+    
+    func animate() {
+        
+        if cpuSelection.image == UIImage(named: "rock.jpeg") {
+            cpuSelection.image = UIImage(named: "paper.jpeg")
+        }else if cpuSelection.image == UIImage(named: "paper.jpeg") {
+            cpuSelection.image = UIImage(named: "scissors.jpeg")
+        }else {
+            cpuSelection.image = UIImage(named: "rock.jpeg")
         }
         
     }
