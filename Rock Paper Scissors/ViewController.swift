@@ -61,13 +61,13 @@ class ViewController: UIViewController {
                 
                 results.text = "LOSER"
                 cpuCurrentScore += 1
-                cpuScore.text = String(cpuCurrentScore)
+                cpuScore.text = "CPU: \(cpuCurrentScore)"
                 
             }else {
                 
                 results.text = "WINNER"
                 myCurrentScore += 1
-                myScore.text = String(myCurrentScore)
+                myScore.text = "ME: \(myCurrentScore)"
                 
             }
             
@@ -104,14 +104,21 @@ class ViewController: UIViewController {
                 
                 results.text = "LOSER"
                 cpuCurrentScore += 1
-                cpuScore.text = String(cpuCurrentScore)
+                cpuScore.text = "CPU: \(cpuCurrentScore)"
                 
             }else {
                 
                 results.text = "WINNER"
                 myCurrentScore += 1
-                myScore.text = String(myCurrentScore)
+                myScore.text = "ME: \(myCurrentScore)"
                 
+            }
+            
+            if cpuCurrentScore == 10 {
+                results.text = "CPU Won"
+                
+            }else if myCurrentScore == 10 {
+                results.text = "You Won"
             }
             
         }
@@ -140,15 +147,22 @@ class ViewController: UIViewController {
                 
                 results.text = "LOSER"
                 cpuCurrentScore += 1
-                cpuScore.text = String(cpuCurrentScore)
+                cpuScore.text = "CPU: \(cpuCurrentScore)"
                 
                 
             }else {
                 
                 results.text = "WINNER"
                 myCurrentScore += 1
-                myScore.text = String(myCurrentScore)
+                myScore.text = "ME: \(myCurrentScore)"
                 
+            }
+            
+            if cpuCurrentScore == 10 {
+                results.text = "CPU Won"
+                
+            }else if myCurrentScore == 10 {
+                results.text = "You Won"
             }
             
         }
@@ -172,6 +186,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         results.text = ""
+        
     }
 
     override func didReceiveMemoryWarning() {
