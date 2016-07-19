@@ -187,6 +187,8 @@ class ViewController: UIViewController {
         
         results.text = ""
         
+        resetGame(<#T##sender: AnyObject##AnyObject#>)
+        
     }
 
     override func didReceiveMemoryWarning() {
