@@ -28,10 +28,8 @@ class ViewController: UIViewController {
     @IBAction func resetGame(sender: AnyObject) {
         
         mySelection.image = UIImage(named: "questionMark.jpg")
-//        cpuSelection.image = UIImage(named: "questionMark.jpg")
         
         timer = NSTimer.scheduledTimerWithTimeInterval(0.3, target: self, selector: #selector(animate), userInfo: nil, repeats: true)
-        
         
         rounds += 1
         roundLabel.text = "Round: \(rounds)"
@@ -71,6 +69,13 @@ class ViewController: UIViewController {
                 myCurrentScore += 1
                 myScore.text = String(myCurrentScore)
                 
+            }
+            
+            if cpuCurrentScore == 10 {
+                results.text = "CPU Won"
+
+            }else if myCurrentScore == 10 {
+                results.text = "You Won"
             }
             
         }
