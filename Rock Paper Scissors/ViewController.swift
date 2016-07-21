@@ -31,9 +31,21 @@ class ViewController: UIViewController {
         
         timer = NSTimer.scheduledTimerWithTimeInterval(0.3, target: self, selector: #selector(animate), userInfo: nil, repeats: true)
         
-        rounds += 1
-        roundLabel.text = "Round: \(rounds)"
-        results.text = ""
+        if rounds == 15 {
+            
+            rounds = 1
+            roundLabel.text = "Round: 1"
+            myCurrentScore = 0
+            myScore.text = "0"
+            cpuCurrentScore = 0
+            cpuScore.text = "0"
+            results.text = "Game Over"
+            
+        }else {
+            rounds += 1
+            roundLabel.text = "Round: \(rounds)"
+            results.text = ""
+        }
         
         didGameStart = false
         
@@ -186,8 +198,6 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         results.text = ""
-        
-        resetGame(<#T##sender: AnyObject##AnyObject#>)
         
     }
 
