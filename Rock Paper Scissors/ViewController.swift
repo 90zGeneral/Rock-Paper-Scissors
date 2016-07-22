@@ -39,7 +39,6 @@ class ViewController: UIViewController {
             myScore.text = "0"
             cpuCurrentScore = 0
             cpuScore.text = "0"
-            results.text = "Game Over"
             
         }else {
             rounds += 1
