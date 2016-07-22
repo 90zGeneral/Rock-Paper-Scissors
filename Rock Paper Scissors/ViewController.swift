@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     var timer = NSTimer()
     var cpuSelectionArray = ["rock.jpeg", "paper.jpeg", "scissors.jpeg"]
     var didGameStart = false
+    
     var myCurrentScore = 0
     var cpuCurrentScore = 0
     var rounds = 1
@@ -21,29 +22,38 @@ class ViewController: UIViewController {
     @IBOutlet var cpuScore: UILabel!
     @IBOutlet var results: UILabel!
     @IBOutlet var roundLabel: UILabel!
+    @IBOutlet var playReset: UIButton!
+    @IBOutlet var chooseOne: UILabel!
     
     @IBOutlet var mySelection: UIImageView!
     @IBOutlet var cpuSelection: UIImageView!
 
     @IBAction func resetGame(sender: AnyObject) {
         
-        mySelection.image = UIImage(named: "questionMark.jpg")
-        
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.3, target: self, selector: #selector(animate), userInfo: nil, repeats: true)
-        
-        if rounds == 15 {
+        if rounds == 17 {
             
-            rounds = 1
-            roundLabel.text = "Round: 1"
+            rounds = 0
             myCurrentScore = 0
-            myScore.text = "0"
             cpuCurrentScore = 0
-            cpuScore.text = "0"
+            results.text = "Game Over"
+            self.playReset.setTitle("Reset", forState: .Normal)
+            self.playReset.setTitleColor(UIColor.redColor(), forState: .Normal)
+            mySelection.image = UIImage(named: "questionMark.jpg")
+            cpuSelection.image = UIImage(named: "questionMark.jpg")
+            playReset.enabled = true
+            playReset.setTitleColor(UIColor.greenColor(), forState: .Normal)
             
         }else {
+            mySelection.image = UIImage(named: "questionMark.jpg")
+            timer = NSTimer.scheduledTimerWithTimeInterval(0.3, target: self, selector: #selector(animate), userInfo: nil, repeats: true)
             rounds += 1
             roundLabel.text = "Round: \(rounds)"
+            myScore.text = "ME: \(myCurrentScore)"
+            cpuScore.text = "CPU: \(cpuCurrentScore)"
             results.text = ""
+            self.playReset.setTitle("Play", forState: .Normal)
+            playReset.enabled = false
+            playReset.setTitleColor(UIColor.lightGrayColor(), forState: .Normal)
         }
         
         didGameStart = false
@@ -83,11 +93,17 @@ class ViewController: UIViewController {
             }
             
             if cpuCurrentScore == 10 {
+                
                 results.text = "CPU Won"
 
             }else if myCurrentScore == 10 {
+                
                 results.text = "You Won"
+                
             }
+            
+            playReset.enabled = true
+            playReset.setTitleColor(UIColor.greenColor(), forState: .Normal)
             
         }
         
@@ -131,6 +147,9 @@ class ViewController: UIViewController {
             }else if myCurrentScore == 10 {
                 results.text = "You Won"
             }
+            
+            playReset.enabled = true
+            playReset.setTitleColor(UIColor.greenColor(), forState: .Normal)
             
         }
         
@@ -176,6 +195,9 @@ class ViewController: UIViewController {
                 results.text = "You Won"
             }
             
+            playReset.enabled = true
+            playReset.setTitleColor(UIColor.greenColor(), forState: .Normal)
+            
         }
         
     }
@@ -196,7 +218,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        
         results.text = ""
+        playReset.enabled = false
+        playReset.setTitleColor(UIColor.lightGrayColor(), forState: .Normal)
+        
         
     }
 

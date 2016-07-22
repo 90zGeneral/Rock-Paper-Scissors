@@ -68,7 +68,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose one from below!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0kn-t4-SV2">
                                 <rect key="frame" x="20" y="408" width="280" height="31"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="0.95770923620000004" blue="0.19247743940000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="questionMark.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="OBE-f4-nii">
@@ -105,9 +105,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NBb-nj-obn">
-                                <rect key="frame" x="120" y="250" width="80" height="36"/>
+                                <rect key="frame" x="120" y="244" width="80" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Reset">
+                                <state key="normal" title="Play">
                                     <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -119,10 +119,12 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="chooseOne" destination="0kn-t4-SV2" id="6pD-HM-X2x"/>
                         <outlet property="cpuScore" destination="EQA-jl-GAW" id="iu5-Et-1Nm"/>
                         <outlet property="cpuSelection" destination="OBE-f4-nii" id="m4L-zu-r47"/>
                         <outlet property="myScore" destination="yLz-sI-w7D" id="yN5-z8-K1U"/>
                         <outlet property="mySelection" destination="ZdG-3o-tkZ" id="XuB-5B-G11"/>
+                        <outlet property="playReset" destination="NBb-nj-obn" id="ozJ-FK-fiz"/>
                         <outlet property="results" destination="rKO-0U-GtN" id="Kva-JA-XqC"/>
                         <outlet property="roundLabel" destination="kf2-gW-u1V" id="eWE-Ae-fsQ"/>
                     </connections>
