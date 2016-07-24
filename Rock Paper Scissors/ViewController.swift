@@ -40,8 +40,8 @@ class ViewController: UIViewController {
             rounds = 0
             myCurrentScore = 0
             cpuCurrentScore = 0
-            results.text = "Game Over"
             playReset.setTitle("Reset", forState: .Normal)
+            results.text = "Game Over"
             playReset.setTitleColor(UIColor.redColor(), forState: .Normal)
             mySelection.image = UIImage(named: "questionMark.jpg")
             cpuSelection.image = UIImage(named: "questionMark.jpg")
@@ -96,12 +96,12 @@ class ViewController: UIViewController {
             if cpuCurrentScore == 10 {
                 
                 results.text = "CPU Won"
-                playReset.setTitle("Reset", forState: .Normal)
+                playReset.setTitle("Play", forState: .Normal)
 
             }else if myCurrentScore == 10 {
                 
                 results.text = "You Won"
-                playReset.setTitle("Reset", forState: .Normal)
+                playReset.setTitle("Play", forState: .Normal)
                 
             }
             
@@ -143,12 +143,12 @@ class ViewController: UIViewController {
             if cpuCurrentScore == 10 {
                 
                 results.text = "CPU Won"
-                playReset.setTitle("Reset", forState: .Normal)
+                playReset.setTitle("Play", forState: .Normal)
                 
             }else if myCurrentScore == 10 {
                 
                 results.text = "You Won"
-                playReset.setTitle("Reset", forState: .Normal)
+                playReset.setTitle("Play", forState: .Normal)
             }
             
             playReset.enabled = true
@@ -190,12 +190,13 @@ class ViewController: UIViewController {
             if cpuCurrentScore == 10 {
                 
                 results.text = "CPU Won"
-                playReset.setTitle("Reset", forState: .Normal)
+                playReset.setTitle("Play", forState: .Normal)
                 
             }else if myCurrentScore == 10 {
                 
                 results.text = "You Won"
-                playReset.setTitle("Reset", forState: .Normal)
+                playReset.setTitle("Play", forState: .Normal)
+                
             }
             
             playReset.enabled = true
