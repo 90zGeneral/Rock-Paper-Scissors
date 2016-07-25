@@ -310,6 +310,7 @@
 				D5028CDB1D33D71200CD03B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

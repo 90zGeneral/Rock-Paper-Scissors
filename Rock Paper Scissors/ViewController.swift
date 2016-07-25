@@ -69,10 +69,15 @@ class ViewController: UIViewController {
         
         if !didGameStart {
             
+            //Stop the animation and prepare random selection for cpu
             timer.invalidate()
+            
             mySelection.image = UIImage(named: "rock.jpeg")
+            
+            //To select a random choice for the cpu
             let randomImage = Int(arc4random_uniform(UInt32(cpuSelectionArray.count)))
             cpuSelection.image = UIImage(named: cpuSelectionArray[randomImage])
+            
             didGameStart = true
             
             if cpuSelection.image == UIImage(named: "rock.jpeg") {
@@ -115,11 +120,16 @@ class ViewController: UIViewController {
     @IBAction func paper(sender: AnyObject) {
         
         if !didGameStart {
-    
+            
+            //Stop the animation and prepare random selection for cpu
             timer.invalidate()
+            
             mySelection.image = UIImage(named: "paper.jpeg")
+            
+            //To select a random choice for the cpu
             let randomImage = Int(arc4random_uniform(UInt32(cpuSelectionArray.count)))
             cpuSelection.image = UIImage(named: cpuSelectionArray[randomImage])
+            
             didGameStart = true
             
             if cpuSelection.image == UIImage(named: "paper.jpeg") {
@@ -162,10 +172,15 @@ class ViewController: UIViewController {
         
         if !didGameStart {
             
+            //Stop the animation and prepare random selection for cpu
             timer.invalidate()
+            
             mySelection.image = UIImage(named: "scissors.jpeg")
+            
+            //To select a random choice for the cpu
             let randomImage = Int(arc4random_uniform(UInt32(cpuSelectionArray.count)))
             cpuSelection.image = UIImage(named: cpuSelectionArray[randomImage])
+            
             didGameStart = true
             
             if cpuSelection.image == UIImage(named: "scissors.jpeg") {
@@ -199,6 +214,7 @@ class ViewController: UIViewController {
                 
             }
             
+            //Activate this button and change text color to green
             playReset.enabled = true
             playReset.setTitleColor(UIColor.greenColor(), forState: .Normal)
             
